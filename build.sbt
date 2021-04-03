@@ -1,5 +1,5 @@
-val scala3Version = "3.0.0-M3"
-val zioVersion = "1.0.3"
+val scala3Version = "3.0.0-RC1"
+val zioVersion = "1.0.5"
 
 lazy val root = project
   .in(file("."))
@@ -13,7 +13,5 @@ lazy val root = project
       "dev.zio" %% "zio-test-sbt" % zioVersion % Test,
       "dev.zio" %% "zio-test-junit" % zioVersion % Test,
       "dev.zio" %% "zio-test-magnolia" % zioVersion % Test
-    ),
-    libraryDependencies := libraryDependencies.value
-      .map(_.withDottyCompat(scalaVersion.value))
+    )
   )
